@@ -6,6 +6,15 @@ Initialized with
 > pnpm dlx nuxi init
 ```
 
+then 
+
+```bash
+pnpm add vuetify
+pnpm dlx nuxi module add vuetify-nuxt-module
+```
+
+There was `Cannot find module 'vuetify/package.json'` error but `pnpm run dev` works fine.
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
