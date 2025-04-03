@@ -6,6 +6,21 @@ Initialized with
 > deno -A npm:nuxi@latest init
 ```
 
+Installed vuetify with
+
+```bash
+deno install npm:vuetify
+deno run -A npm:nuxi@latest module add vuetify-nuxt-module
+```
+
+There was error
+
+```
+Could not find referrer npm package 'file:///home/d9k/cr/demo/nuxt-eshop-demo/node_modules/.deno/jiti@2.4.2/node_modules/jiti/dist/babel.cjs'.
+```
+
+— see https://github.com/vuetifyjs/nuxt-module/issues/306.
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
@@ -13,17 +28,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+deno install
 ```
 
 ## Development Server
@@ -31,17 +36,7 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+deno run dev
 ```
 
 ## Production
@@ -49,33 +44,13 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+deno run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+deno run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
