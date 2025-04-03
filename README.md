@@ -1,5 +1,11 @@
 # Nuxt store demo
 
+Development status on Deno: paused due to bad IDE support (2025.03):
+- [\[FEATURE REQUEST\] Add Deno Support · Issue #2258 · vuejs/language-tools](https://github.com/vuejs/language-tools/issues/2258), 2022
+    - 2025: still open
+- [typescript - vue + deno + vscode => How to integrate them for comfort development? - Stack Overflow](https://stackoverflow.com/questions/78157571/vue-deno-vscode-how-to-integrate-them-for-comfort-development), 2024
+    - too hacky solution
+
 Initialized with
 
 ```bash
