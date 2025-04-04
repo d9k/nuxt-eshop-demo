@@ -21,6 +21,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 
 VSCode extensions required for correct IDE usage (2025):
 
+- [Vue - Official - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [Goto definition alias - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=antfu.goto-alias)
 - [Nuxtr - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Nuxtr.nuxtr-vscode)
 
