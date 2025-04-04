@@ -6,7 +6,7 @@ Initialized with
 > pnpm dlx nuxi init
 ```
 
-then 
+then
 
 ```bash
 pnpm add vuetify

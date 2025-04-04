@@ -1,7 +1,21 @@
 {
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   // https://marketplace.visualstudio.com/items?itemName=antfu.goto-alias
 
-  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto"
 
   // https://marketplace.visualstudio.com/items?itemName=cpreston321.nuxt-vscode
   // requires `corepack enable`
