@@ -14,11 +14,7 @@
   },
 
   // https://marketplace.visualstudio.com/items?itemName=antfu.goto-alias
-
   "editor.gotoLocation.multipleDefinitions": "goto"
-
-  // https://marketplace.visualstudio.com/items?itemName=cpreston321.nuxt-vscode
-  // requires `corepack enable`
 
   // https://marketplace.visualstudio.com/items?itemName=Nuxtr.nuxtr-vscode
 }

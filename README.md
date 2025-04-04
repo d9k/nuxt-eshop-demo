@@ -17,6 +17,13 @@ There was `Cannot find module 'vuetify/package.json'` error but `pnpm run dev` w
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## VSCode configure
+
+VSCode extensions required for correct IDE usage (2025):
+
+- [Goto definition alias - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=antfu.goto-alias)
+- [Nuxtr - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Nuxtr.nuxtr-vscode)
+
 ## Setup
 
 Make sure to install dependencies:
