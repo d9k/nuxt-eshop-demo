@@ -1,6 +1,9 @@
 <script lang="ts" setup>
-const fakeStoreApiUrl = useFakeStoreApiUrl();
-console.log("API base URL:", fakeStoreApiUrl);
+const { data: categoriesData } = await useFakeStoreCategories();
+// const fakeStoreApiUrl = useFakeStoreApiUrl();
+// console.log("API base URL:", fakeStoreApiUrl);
+console.log("categories:", toPojo(categoriesData));
+console.log("__TEST__ 20:", toPojo("456"));
 </script>
 
 <template>
