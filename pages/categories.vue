@@ -12,14 +12,30 @@ const categoriesData = categoriesDataRaw as Ref<Category[] | null>;
 // console.log("categories:", toPojo(categoriesData));
 // console.log("__TEST__ 20:", toPojo("456"));
 
-console.log("__TEST__: categoriesData:", toPojo(categoriesData));
-console.log("__TEST__: categoriesError:", toPojo(categoriesError));
+// console.log("__TEST__: categoriesData:", toPojo(categoriesData));
+// console.log("__TEST__: categoriesError:", toPojo(categoriesError));
 </script>
 
 <template>
-  <div>
-    <h3>Categories</h3>
-  </div>
+  <v-container fluid>
+    <v-row wrap>
+      <v-col xs="12" sm="6" offset-sm="3">
+        <v-row><h3>Categories</h3></v-row>
+        <v-row v-if="categoriesData">
+          <v-card
+            v-for="cat in categoriesData"
+            :key="cat.id"
+            :style="{ minWidth: '200px' }"
+          >
+            <v-card-title>{{ cat.name }}</v-card-title>
+            <v-card-text>
+              <v-img v-if="cat.image" :src="cat.image" />
+            </v-card-text>
+          </v-card>
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <style></style>
