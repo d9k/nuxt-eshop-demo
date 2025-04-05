@@ -1,4 +1,7 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const fakeStoreApiUrl = useFakeStoreApiUrl();
+console.log("API base URL:", fakeStoreApiUrl);
+</script>
 
 <template>
   <div>
