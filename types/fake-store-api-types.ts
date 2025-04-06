@@ -9,3 +9,4 @@ export type BaseFields = {
 };
 
 export type Category = BaseFields & schemas["CreateCategoryDto"];
+export type Product = BaseFields & schemas["CreateProductDto"];

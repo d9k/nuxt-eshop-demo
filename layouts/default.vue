@@ -8,8 +8,8 @@ const menuItems = [
 
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title> Shop Demo </v-toolbar-title>
+    <v-app-bar>
+      <v-app-bar-title> Shop Demo </v-app-bar-title>
       <v-spacer />
       <v-toolbar-items>
         <v-btn
@@ -24,8 +24,10 @@ const menuItems = [
           {{ item.title }}
         </v-btn>
       </v-toolbar-items>
-    </v-toolbar>
-    <slot />
+    </v-app-bar>
+    <v-sheet style="margin-top: 200px">
+      <slot />
+    </v-sheet>
   </v-app>
 </template>
 

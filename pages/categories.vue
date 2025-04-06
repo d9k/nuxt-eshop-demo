@@ -26,6 +26,7 @@ const categoriesData = categoriesDataRaw as Ref<Category[] | null>;
             v-for="cat in categoriesData"
             :key="cat.id"
             :style="{ minWidth: '200px' }"
+            :href="`category/${cat.id}`"
           >
             <v-card-title>{{ cat.name }}</v-card-title>
             <v-card-text>
