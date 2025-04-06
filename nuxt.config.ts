@@ -24,7 +24,9 @@ export default defineNuxtConfig({
   openFetch: {
     clients: {
       fakeStoreApi: {
-        baseURL: "https://api.escuelajs.co/",
+        baseURL:
+          process.env.NUXT_PUBLIC_FAKE_STORE_API_URL ??
+          "https://api.escuelajs.co/",
         schema: "https://api.escuelajs.co/swagger/json",
       },
     },
