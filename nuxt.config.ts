@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "vuetify-nuxt-module",
     "@nuxt/eslint",
-    "nuxt-open-fetch",
+    "nuxt-open-fetch-x",
   ],
   // runtimeConfig: {
   //   public: {

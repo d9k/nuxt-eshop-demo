@@ -13,6 +13,8 @@ pnpm add vuetify
 pnpm dlx nuxi module add vuetify-nuxt-module
 ```
 
+Had to install [nuxt-open-fetch-x](https://github.com/Norbiros/nuxt-open-fetch-x) instead of [nuxt-open-fetch](https://github.com/enkot/nuxt-open-fetch) due to issue: [Nuxt 4.15.1 breaks the module | issue #83 | nuxt-open-fetch](https://github.com/enkot/nuxt-open-fetch/issues/83).
+
 There was `Cannot find module 'vuetify/package.json'` error but `pnpm run dev` works fine.
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
