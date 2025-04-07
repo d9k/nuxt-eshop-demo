@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const menuItems = [
-  { title: "Demo", path: "/", icon: "mdi-home" },
-  // { title: 'Sign Up', path: '/signup', icon: 'face' },
   { title: "Categories", path: "/categories", icon: "mdi-menu" },
+  { title: "Demo", path: "/demo", icon: "mdi-creation" },
+  // { title: 'Sign Up', path: '/signup', icon: 'face' },
 ];
 </script>
 
