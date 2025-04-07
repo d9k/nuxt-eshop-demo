@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ProductCardImage from "~/components/ProductCardImage.vue";
+import ImageWithPreviewAndPlaceholder from "~/components/ImageWithPreview.vue";
 import type { Category, Product } from "~/types/fake-store-api-types";
 
 const route = useRoute();
@@ -50,12 +50,13 @@ const placeholderImageUrl = computed(() => category.value?.image);
             >
               <v-card-title>{{ pr.title }}</v-card-title>
               <v-card-text>
-                <ProductCardImage
+                <ImageWithPreview
                   v-if="pr.images[0]"
                   :aspect-ratio="1 / 1"
                   :placeholder-image-url="placeholderImageUrl"
                   :image-url="pr.images[0]"
                   width="100%"
+                  :preview-width-px="256 + 128"
                 />
                 <p v-if="pr.description" class="mt-3">{{ pr.description }}</p>
               </v-card-text>

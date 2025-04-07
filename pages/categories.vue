@@ -5,15 +5,6 @@ const { data: categoriesDataRaw, error: categoriesError } =
   await useFakeStoreApi("/api/v1/categories");
 
 const categoriesData = categoriesDataRaw as Ref<Category[] | null>;
-
-// const { data: categoriesData } = await useFakeStoreCategories();
-// const fakeStoreApiUrl = useFakeStoreApiUrl();
-// console.log("API base URL:", fakeStoreApiUrl);
-// console.log("categories:", toPojo(categoriesData));
-// console.log("__TEST__ 20:", toPojo("456"));
-
-// console.log("__TEST__: categoriesData:", toPojo(categoriesData));
-// console.log("__TEST__: categoriesError:", toPojo(categoriesError));
 </script>
 
 <template>
@@ -25,12 +16,16 @@ const categoriesData = categoriesDataRaw as Ref<Category[] | null>;
           <v-card
             v-for="cat in categoriesData"
             :key="cat.id"
-            :style="{ minWidth: '200px' }"
+            :style="{ minWidth: '300px' }"
             :href="`category/${cat.id}`"
           >
             <v-card-title>{{ cat.name }}</v-card-title>
             <v-card-text>
-              <v-img v-if="cat.image" :src="cat.image" />
+              <!-- <v-img v-if="cat.image" :src="cat.image" /> -->
+              <image-with-preview
+                :image-url="cat.image"
+                :preview-width-px="512"
+              />
             </v-card-text>
           </v-card>
         </v-row>
