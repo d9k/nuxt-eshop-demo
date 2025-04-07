@@ -10,8 +10,26 @@ then
 
 ```bash
 pnpm add vuetify
-pnpm dlx nuxi module add vuetify-nuxt-module
+pnpm dlx nuxi@latest module add vuetify-nuxt-module
+pnpm dlx nuxi@latest module add @nuxt/image
 ```
+
+Need
+
+```bash
+pnpm add sharp@0.33.5 --allow-build=sharp
+mkdir .ipx-cache
+```
+
+for image resize working!
+
+Do
+
+```bash
+mkdir -p .cache/ipx
+```
+
+for images thumbnails cache to work.
 
 Had to install [nuxt-open-fetch-x](https://github.com/Norbiros/nuxt-open-fetch-x) instead of [nuxt-open-fetch](https://github.com/enkot/nuxt-open-fetch) due to issue: [Nuxt 4.15.1 breaks the module | issue #83 | nuxt-open-fetch](https://github.com/enkot/nuxt-open-fetch/issues/83).
 

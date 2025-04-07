@@ -1,3 +1,4 @@
+import type { NuxtPage } from "nuxt/schema";
 // type ComponentName = keyof typeof import("vuetify/components");
 // import * from "vuetify/components";
 // import * as components from "vuetify/components";
@@ -12,12 +13,21 @@ export default defineNuxtConfig({
     "vuetify-nuxt-module",
     "@nuxt/eslint",
     "nuxt-open-fetch-x",
+    "@nuxt/image",
+    "nuxt-ipx-cache",
   ],
   // runtimeConfig: {
   //   public: {
   //     fakeStoreApiUrl: "https://api.escuelajs.co/api/v1",
   //   },
   // },
+  build: {
+    // May fix image resizer error https://github.com/nuxt/image/issues/1046
+    transpile: ["sharp"],
+  },
+  image: {
+    ipx: {},
+  },
   imports: {
     dirs: ["composables/**"],
   },
@@ -45,5 +55,9 @@ export default defineNuxtConfig({
         sets: ["mdi", "fa"],
       },
     },
+  },
+  ipxCache: {
+    /** Max cache age in seconds before getting deleted from disk. (default 1 day) */
+    maxAge: 60 * 60 * 24,
   },
 });

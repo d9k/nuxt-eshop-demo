@@ -14,7 +14,10 @@
   },
 
   // https://marketplace.visualstudio.com/items?itemName=antfu.goto-alias
-  "editor.gotoLocation.multipleDefinitions": "goto"
+  "editor.gotoLocation.multipleDefinitions": "goto",
 
   // https://marketplace.visualstudio.com/items?itemName=Nuxtr.nuxtr-vscode
+  "nuxtr.vueFiles.firstTag": "script",
+  "nuxtr.vueFiles.style.alwaysScoped": true,
+  "nuxtr.vueFiles.style.defaultLanguage": "scss"
 }

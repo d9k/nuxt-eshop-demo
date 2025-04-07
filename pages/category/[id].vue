@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import ProductCardImage from "~/components/ProductCardImage.vue";
 import type { Category, Product } from "~/types/fake-store-api-types";
 
 const route = useRoute();
@@ -17,24 +18,45 @@ const { data: productsDataRaw, error: productsLoadError } =
   });
 
 const category = categoryDataRaw as Ref<Category | null>;
-const products = productsDataRaw as Ref<Product[] | null>;
+const products = computed(() => (productsDataRaw.value ?? []) as Product[]);
+
+// watch(
+//   products,
+//   () => {
+//     console.log("__TEST__", toPojo(products));
+//   },
+//   { immediate: true }
+// );
+
+const placeholderImageUrl = computed(() => category.value?.image);
 </script>
 <template>
+  <!-- <v-img v-if="pr.images[0]" :src="pr.images[0]"> -->
+  <!-- v-if="pr.images[0]" -->
+  <!-- <template v-if="placeholderImageUrl" #placeholder> -->
+
   <v-row justify="center">
-    <v-sheet v-if="category" width="1400" class="pa-5">
-      <h3 class="text-center">{{ category.name }}</h3>
+    <v-sheet width="1400" class="pa-5">
+      <h3 class="text-center">{{ category?.name }}</h3>
       <v-card class="pa-5">
         <v-card-text>
-          <v-row v-if="products" justify="center">
+          <v-row justify="center">
             <v-card
               v-for="pr in products"
               :key="pr.id"
               class="mr-4 mb-4"
               :style="{ width: '400px' }"
+              aspect-ratio="1/1"
             >
               <v-card-title>{{ pr.title }}</v-card-title>
               <v-card-text>
-                <v-img v-if="pr.images[0]" :src="pr.images[0]" />
+                <ProductCardImage
+                  v-if="pr.images[0]"
+                  :aspect-ratio="1 / 1"
+                  :placeholder-image-url="placeholderImageUrl"
+                  :image-url="pr.images[0]"
+                  width="100%"
+                />
                 <p v-if="pr.description" class="mt-3">{{ pr.description }}</p>
               </v-card-text>
             </v-card>
