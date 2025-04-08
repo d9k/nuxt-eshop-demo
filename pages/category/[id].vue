@@ -29,6 +29,7 @@ const products = computed(() => (productsDataRaw.value ?? []) as Product[]);
 // );
 
 const placeholderImageUrl = computed(() => category.value?.image);
+const placeholderAlt = computed(() => category.value?.name);
 </script>
 <template>
   <!-- <v-img v-if="pr.images[0]" :src="pr.images[0]"> -->
@@ -54,6 +55,8 @@ const placeholderImageUrl = computed(() => category.value?.image);
                   v-if="pr.images[0]"
                   :aspect-ratio="1 / 1"
                   :placeholder-image-url="placeholderImageUrl"
+                  :image-alt="pr.title"
+                  :placeholder-alt="placeholderAlt"
                   :image-url="pr.images[0]"
                   width="100%"
                   :preview-width-px="256 + 128"

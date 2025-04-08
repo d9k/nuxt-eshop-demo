@@ -24,6 +24,9 @@ const categoriesData = categoriesDataRaw as Ref<Category[] | null>;
               <!-- <v-img v-if="cat.image" :src="cat.image" /> -->
               <image-with-preview
                 :image-url="cat.image"
+                placeholder-image-url="/shopping-bags-6673411-pngtree.com.jpg"
+                :image-alt="cat.name"
+                placeholder-alt="#shopping bags (6673411 image from pngtree.com)"
                 :preview-width-px="512"
               />
             </v-card-text>

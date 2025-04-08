@@ -1,19 +1,26 @@
 <script lang="ts" setup>
 const {
   imageUrl,
+  imageAlt,
   placeholderImageUrl,
+  placeholderAlt,
   aspectRatio = 1 / 1,
   width = "100%",
   previewWidthPx = 256,
 } = defineProps<{
   aspectRatio?: number;
   imageUrl?: string;
+  imageAlt?: string;
   placeholderImageUrl?: string;
+  placeholderAlt?: string;
   previewWidthPx?: number;
   width?: string;
 }>();
 
 const img = useImage();
+
+const imageLoadFail = ref(false);
+
 const previewUrl = computed(() =>
   imageUrl ? img(imageUrl, { width: previewWidthPx }) : undefined
 );
@@ -32,16 +39,19 @@ const placeholderPreviewUrl = computed(() =>
       :src="placeholderImageUrl"
       :lazy-src="placeholderPreviewUrl"
       :aspect-ratio="aspectRatio"
+      :alt="placeholderAlt"
       class="image-placeholder"
       cover
     />
     <VImg
-      v-if="imageUrl"
+      v-if="imageUrl && !imageLoadFail"
       :src="imageUrl"
       :lazy-src="previewUrl"
       :aspect-ratio="aspectRatio"
+      :alt="imageAlt"
       class="image"
       cover
+      @error="imageLoadFail = true"
     />
   </v-responsive>
 </template>
