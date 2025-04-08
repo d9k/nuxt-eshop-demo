@@ -1,4 +1,4 @@
-# Nuxt store demo
+# Nuxt e-shop demo
 
 ## Features
 
